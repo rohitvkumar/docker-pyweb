@@ -5,11 +5,11 @@ from bottle import route, run
 def hello(endpoint):
     return "Hello World! You have reached: {0}\n".format(endpoint)
 
-@route('/<endpoint>/<a>')
+@route('/<endpoint>/<a>', method='POST')
 def hello(endpoint, a):
     return "Hello World! You have reached: {0}/{1}\n".format(endpoint, a)
 
-@route('/<endpoint>/<a>/<b>')
+@route('/<endpoint>/<a>/<b>',method='POST')
 def hello(endpoint, a, b):
     return "Hello World! You have reached: {0}/{1}/{2}\n".format(endpoint, a, b)
 
